@@ -41,8 +41,17 @@ h1 {
   border-bottom: 3px solid #012d42;
 }
 
+.contact-container {
+  margin: 3px auto;
+  padding: 1em 0;
+  max-width: 90%;
+  border-top: 1px solid #012d42;
+}
+
 fieldset {
+  /* margin: 0 auto;
   margin-bottom: 30px;
+  max-width: 90%; */
   border: none;
 }
 
