@@ -7,19 +7,19 @@
   <title>Online Registration Form</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <form action="" method="POST">
     <h1>The Code Review</h1>
-    <div class="sub-heading">
+    <div class="container sub-heading">
       <h2>Signup for our newsletter</h2>
       <p>Get the latest news on how your code is doing right in your inbox</p>
     </div>
 
-    <div class="contact-container">
+    <div class="container contact-container">
       <fieldset class="contact" id="contact">
         <legend>Contact Information</legend>
         <div class="form-row">
@@ -42,7 +42,6 @@
           <label class="form-label" for="city">City</label>
           <input type="text" id="city" name="user_city">
         </div>
-  
         <div class="form-row">
           <label class="form-label" for="state">State</label>
           <select id="state" name="user_state">
@@ -50,10 +49,9 @@
             <option value="california">California</option>
           </select> 
         </div>
-  
         <div class="form-row">
           <label class="form-label" for="zip">Zip Code</label>
-          <input type="number" id="zip" name="user_zip">
+          <input type="text" id="zip" name="user_zip">
         </div>
   
       </fieldset>
@@ -61,52 +59,53 @@
 
 
 
-    <div class="container">
-
+    <div class="container newsletter-container">
+      <fieldset class="newsletter" id="newsletter">
+        <legend>Newsletter</legend>
+        <div class="newsletter-inner">
+   
+          <label class="form-label">Select the newsletters you would like to receive</label>
+          <!-- Newsletters - checkboxes -->
+          <div class="form-choice">
+            <input type="checkbox" id="html-news" value="news_html" name="news_interest">
+            <label class="form-label label-inline" for="html-news">HTML News</label>
+          </div>
+    
+          <div class="form-choice">
+            <input type="checkbox" id="css-news" value="news_css" name="news_interest">
+            <label class="form-label label-inline" for="css-news">CSS News</label>
+          </div>
+    
+          <div class="form-choice">
+            <input type="checkbox" id="javascript-news" value="news_javascript" name="news_interest">
+            <label class="form-label label-inline" for="javascript-news">JavaScript News</label>
+          </div>
+    
+    
+          <label class="form-label">Newsletter format</label>
+          <!-- Newsletter format - radios -->
+          <div class="form-choice">
+            <input type="radio" id="html-format" value="html_format" name="news_format">
+            <label class="form-label label-inline" for="html-format">HTML</label>
+          </div>
+    
+          <div class="form-choice">
+            <input type="radio" id="plain-format" value="plain_format" name="news_format">
+            <label class="form-label label-inline" for="plain-format">Plain text</label>
+          </div>
+    
+            
+          <label for="comments">Other topics you'd like to hear about</label>
+          <textarea name="user_comments" id="comments" cols="30" rows="10"></textarea>
+        </div>
+      </fieldset>
     </div>
-    <fieldset class="newsletter" id="newsletter">
-      <legend>Newsletter</legend>
 
-      <label class="form-label">Select the newsletters you would like to receive</label>
-      <!-- Newsletters - checkboxes -->
-      <div class="form-choice">
-        <input type="checkbox" id="html-news" value="news_html" name="news_interest">
-        <label class="form-label" for="html-news">HTML News</label>
-      </div>
+    <div class="container">
+      <button class="btn" type="submit">Sign Up</button>
+      <p class="copyright">Copyright The Code Review</p>
+    </div>
 
-      <div class="form-choice">
-        <input type="checkbox" id="css-news" value="news_css" name="news_interest">
-        <label class="form-label" for="css-news">CSS News</label>
-      </div>
-
-      <div class="form-choice">
-        <input type="checkbox" id="javascript-news" value="news_javascript" name="news_interest">
-        <label class="form-label" for="javascript-news">JavaScript News</label>
-      </div>
-
-
-      <label class="form-label">Newsletter format</label>
-      <!-- Newsletter format - radios -->
-      <div class="form-choice">
-        <input type="radio" id="html-format" value="html_format" name="news_format">
-        <label class="form-label" for="html-format">HTML</label>
-      </div>
-
-      <div class="form-choice">
-        <input type="radio" id="plain-format" value="plain_format" name="news_format">
-        <label class="form-label" for="plain-format">Plain text</label>
-      </div>
-
-
-      
-      <label for="comments">Other topics you'd like to hear about</label>
-      <textarea name="user_comments" id="comments" cols="30" rows="10"></textarea>
-
-    </fieldset>
-
-    <button type="submit">Sign Up</button>
-
-    <span class="copyright">Copyright The Code Review</span>
   </form>
   
 </body>
