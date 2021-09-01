@@ -1,3 +1,4 @@
+/* Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,7 @@ body {
 
 form {
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #fafafa;
   border-radius: 8px;
 }
 
@@ -28,9 +29,10 @@ form {
 
 .contact-container,
 .newsletter-container {
-  border-top: 2px solid #012d42;
+  border-top: 2px solid #464660;
 }
 
+/* Additional Typography */
 h1, h2, p {
   text-align: center;
 }
@@ -42,7 +44,8 @@ h1, h2 {
 h1 {
   font-size: 1.75rem;
   text-transform: uppercase;
-  background-color: #082231;
+  /* background-color: #082231; */
+  background-color: #464660;
   color: #fff;
   padding: 1em 0;
 }
@@ -52,10 +55,11 @@ h2 {
   margin-bottom: .5em;
 }
 
+/* Additional Form and layout styles */
 .sub-heading {
   margin-bottom: 4px;
   padding: 2em 0;
-  border-bottom: 4px solid #012d42;
+  border-bottom: 4px solid #464660;
 }
 
 .sub-heading p,
@@ -99,7 +103,9 @@ input[type="tel"],
 input[type="number"],
 textarea,
 select {
+  font-family: 'Merriweather', Georgia, serif;
   background: rgba(255,255,255,0.1);
+  outline: none;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -108,6 +114,18 @@ select {
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  /* box-shadow: 0 0 5px 0 #f47b1f; */
+  background-color: #F1E9E5;;
+  box-shadow: 0 0 5px rgb(255, 76, 41) inset;
+  transition: background-color .5s ease-in-out;
 }
 
 .zip-input {
@@ -133,6 +151,25 @@ input[type="checkbox"] {
   color: #8a97a0;
 }
 
+/* Override Chrome autofill input styles 
+   Guidance found on CSS Tricks: https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/
+*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  -webkit-text-fill-color: #8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .form-choice {
   height: 50px;
   display: flex;
@@ -145,10 +182,11 @@ input[type="checkbox"] {
   padding-top: 1.5em;
 }
 
+/* Button styles inspiration/guidance from Co-op design, https://coop-design-system.herokuapp.com */
 .btn {
   font-family: 'Merriweather', Georgia, serif;
   font-weight: 700;
-  background-color: #0f8482;
+  background-color: #368B85;
   color: #fff;
   margin-bottom: 2em;
   padding: 1.5em 1.25em;
