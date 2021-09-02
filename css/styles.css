@@ -135,7 +135,8 @@ select:focus {
 }
 
 .zip-input {
-  max-width: 165px;
+  /* max-width: 165px; */
+  width: 50%;
 }
 
 textarea {
@@ -268,6 +269,10 @@ select:-webkit-autofill:focus {
 
   .form-choice {
     height: 40px;
+  }
+
+  .zip-input {
+    max-width: 25%;
   }
 
 }
