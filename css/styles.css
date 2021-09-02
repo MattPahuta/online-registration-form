@@ -52,14 +52,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   margin-bottom: .5em;
 }
 
 /* Additional Form and layout styles */
 .sub-heading {
   margin-bottom: 4px;
-  padding: 2em 0;
   border-bottom: 4px solid #464660;
 }
 
@@ -69,7 +68,11 @@ h2 {
   font-weight: 300;
   color: #8a97a0;
   line-height: 1.6;
-  max-width: 85%;
+  max-width: 95%;
+}
+
+.sub-heading p {
+  font-size: .9rem;
 }
 
 fieldset {
@@ -154,6 +157,10 @@ input[type="checkbox"] {
   color: #8a97a0;
 }
 
+textarea::placeholder {
+  text-align: left;
+}
+
 /* Override Chrome autofill input styles 
    Guidance found on CSS Tricks: https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/
 */
@@ -191,7 +198,7 @@ select:-webkit-autofill:focus {
   background-color: #368B85;
   color: #fff;
   margin-bottom: 2em;
-  padding: 1.5em 1.25em;
+  padding: 1.25em;
   width: 100%;
   min-height: 3.25rem;
   font-size: 1.125rem;
@@ -217,12 +224,13 @@ select:-webkit-autofill:focus {
 .copyright {
   font-size: .9rem;
   font-style: italic;
+  margin-bottom: 1em;
 } 
 
 @media (min-width: 768px) {
 
   .container {
-    max-width: 775px;
+    max-width: 640px;
   }
 
   .sub-heading {
@@ -256,6 +264,10 @@ select:-webkit-autofill:focus {
     height: 50px;
     flex-basis: 65%;
     flex-grow: 1;
+  }
+
+  .form-choice {
+    height: 40px;
   }
 
 }

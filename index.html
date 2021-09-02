@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
   <form class="registration" action="index.html" method="POST">
+    <!-- Header Section -->
     <h1>The Code Review</h1>
     <div class="container sub-heading">
       <h2>Signup for our newsletter</h2>
       <p>Get the latest news on how your code is doing right in your inbox</p>
     </div>
-
+    <!-- Contact Section-->
     <div class="container contact-container">
       <fieldset class="contact" id="contact">
         <legend>Contact Information</legend>
@@ -57,10 +57,9 @@
           <label class="contact-label" for="zip">Zip Code</label>
           <input class="zip-input" id="zip" type="text" name="user_zip" placeholder="Postal code" required>
         </div>
-  
       </fieldset>
     </div>
-
+    <!-- Newsletter Section -->
     <div class="container newsletter-container">
       <fieldset class="newsletter" id="newsletter">
         <legend>Newsletter</legend>
@@ -81,7 +80,7 @@
             <label for="javascript-news">JavaScript News</label>
           </div>
           <div class="form-choice">
-            <label>Newsletter format</label>
+            <label class="newsletters-label">Newsletter format</label>
           </div>
           <!-- Newsletter format - radios -->
           <div class="form-choice">
@@ -94,7 +93,7 @@
           </div>
           <div class="form-comments">
             <label class="comments-label" for="comments">Other topics you'd like to hear about</label>
-            <textarea name="user_comments" id="comments" ></textarea>
+            <textarea name="user_comments" id="comments" placeholder="We want to hear from you..."></textarea>
           </div> 
       </fieldset>
     </div>
