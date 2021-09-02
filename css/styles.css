@@ -13,7 +13,7 @@ body {
 
 form {
   margin: 0 auto;
-  background-color: #fafafa;
+  background-color: #ececec;
   border-radius: 8px;
 }
 
@@ -44,10 +44,11 @@ h1, h2 {
 h1 {
   font-size: 1.75rem;
   text-transform: uppercase;
-  /* background-color: #082231; */
-  background-color: #464660;
   color: #fff;
   padding: 1em 0;
+  background: #34e89e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f3443, #34e89e); 
+  background: linear-gradient(to right, #0f3443, #34e89e); 
 }
 
 h2 {
@@ -96,6 +97,11 @@ legend {
   margin-bottom: .8em;
 }
 
+.newsletters-label,
+.comments-label {
+  line-height: 1.6;
+}
+
 /* Input styles inspired by Treehouse forms course */
 input[type="text"],
 input[type="email"],
@@ -104,13 +110,12 @@ input[type="number"],
 textarea,
 select {
   font-family: 'Merriweather', Georgia, serif;
-  background: rgba(255,255,255,0.1);
   outline: none;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   padding: .8em;
-  background-color: #e8eeef;
+  background-color: #FDFAF6;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
@@ -122,10 +127,8 @@ input[type="tel"]:focus,
 input[type="number"]:focus,
 textarea:focus,
 select:focus {
-  /* box-shadow: 0 0 5px 0 #f47b1f; */
-  background-color: #F1E9E5;;
   box-shadow: 0 0 5px rgb(255, 76, 41) inset;
-  transition: background-color .5s ease-in-out;
+  transition: box-shadow .3s ease-in-out;
 }
 
 .zip-input {
@@ -175,7 +178,6 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* margin: 20px auto; */
 }
 
 .form-comments {
@@ -198,7 +200,7 @@ select:-webkit-autofill:focus {
   border-radius: 8px;
   outline: none;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
   transition-property: background-color;
 }
 
